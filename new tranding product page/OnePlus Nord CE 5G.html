@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>OnePlus Nord CE 5G</title>
+</head>
+<style>
+ @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body{
+    font-family: 'Roboto';
+}
+
+.footers ul {line-height:30px;}
+.footers a {color:#696969;}
+.footers p {color:#696969;}
+
+
+.team p{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.navbar-brand img{
+  height: 40px;
+}
+.nav-link:hover {
+   color: #158bf8!important;
+}
+.navbar-toggler {
+  border:0px;
+}
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.card img{
+    width: 100%;
+    display: block;
+}
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    text-transform: capitalize;
+    position: relative;
+    margin: 1rem 0;
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+}
+.product-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.product-link:hover{
+    opacity: 0.9;
+}
+.product-rating{
+    color: #ffc107;
+}
+.rate{
+    font-weight: 600;
+    color: #201f1f;
+}
+.product-price{
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+.product-price span{
+    font-weight: 400;
+}
+.last-price{
+    padding-bottom: -20px;
+}
+.product-detail h6{
+    text-transform: capitalize;
+    color: #12263a;
+    padding-bottom: 0.6rem;
+}
+.product-detail p{
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+.fa-tag{
+    color: rgb(1, 139, 1);
+    font-size: 20px;
+    padding-right: 5px;
+}
+.product-imgs{
+    margin-top: -30%;
+}
+.project-tab {
+    padding: 10%;
+    margin-top: -9%;
+}
+.project-tab #tabs{
+    background: #007b5e;
+    color: #eee;
+}
+.project-tab #tabs h6.section-title{
+    color: #eee;
+}
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #0062cc;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+.project-tab .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #0062cc;
+    font-size: 16px;
+    font-weight: 600;
+}
+.project-tab .nav-link:hover {
+    border: none;
+}
+.project-tab thead{
+    background: #f3f3f3;
+    color: #333;
+}
+.project-tab a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.footers .media-icons a{
+  font-size: 20px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #222222;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.text{
+    text-align: center;
+    color: rgb(104, 104, 104);
+    padding-top: 30px;
+    padding-right: 38%;
+    margin-bottom: -10px;
+}
+.container button{
+    margin-top: 20px;
+    width: 230px;
+    height: 40px;
+    text-align: center;
+}
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+      
+}
+@media screen and (max-width: 1200px) {
+    .product-imgs{
+      padding-top: 135px;
+    }
+    .text{
+       padding-top: 20px;
+       margin-bottom:-20px;
+       padding-left: 10px;
+       text-align: left;
+    }
+    .container button{
+       margin-top: 20px;
+       width: 185px;
+       height: 40px;
+       text-align: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    .container button{
+       margin-top: 20px;
+       width: 175px;
+       height: 40px;
+       text-align: center;
+    }
+}
+</style>
+<body>
+
+<!--navbar-->
+<div class="bs-example">
+  <nav class="navbar navbar-expand-md navbar-light">
+    <a href="#" class="navbar-brand"><img src="trending/Add a heading.png" alt=""></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+      
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">VIVO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ONE PLUS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">OPPO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">REDMI</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SAMSUNG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">APPLE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SMART TV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">E-BOOKS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">MEN'S STORE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">WOMEN'S STORE</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+<p class="text">HOME / TRENDING PRODUCT / ONEPLUS NORD CE 5G</p>
+<!--main part-->
+    <div class = "card-wrapper">
+        <div class = "card">
+          <!-- card left -->
+          <div class = "product-imgs">
+            <div class = "img-display">
+              <div class = "img-showcase">
+                <img src = "trending/OnePlus Nord CE 5G-0.jpg" alt = "OPPO A74 5G">
+                <img src = "trending/OnePlus Nord CE 5G-1.jpg" alt = "OPPO A74 5G">
+                <img src = "trending/OnePlus Nord CE 5G-2.jpg" alt = "OPPO A74 5G">
+                <img src = "trending/OnePlus Nord CE 5G-3.jpg" alt = "OPPO A74 5G">
+              </div>
+            </div>
+            <div class = "img-select mt-3">
+              <div class = "img-item">
+                <a href = "#" data-id = "1">
+                    <img src = "trending/OnePlus Nord CE 5G-0.jpg" alt = "OPPO A74 5G">
+                </a>
+              </div>
+              <div class = "img-item">
+                <a href = "#" data-id = "2">
+                    <img src = "trending/OnePlus Nord CE 5G-1.jpg" alt = "OPPO A74 5G">
+                </a>
+              </div>
+              <div class = "img-item">
+                <a href = "#" data-id = "3">
+                  <img src = "trending/OnePlus Nord CE 5G-2.jpg" alt = "OPPO A74 5G">
+                </a>
+              </div>
+              <div class = "img-item">
+                <a href = "#" data-id = "4">
+                  <img src = "trending/OnePlus Nord CE 5G-3.jpg" alt = "OPPO A74 5G">
+                </a>
+              </div>
+            </div>
+            <div class="container">
+                <button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                <button type="button" class="btn btn-primary"><i class="fas fa-bolt"></i> Buy Now</button>
+            </div>
+          </div>
+          <!-- card right -->
+          <div class = "product-content">
+            <h4 class = "product-title">OnePlus Nord CE 5G (Blue Void, 8GB RAM, 128GB Storage)</h4>
+            <a href = "#" class = "product-link">Visit the OnePlus Store</a>
+            <div class = "product-rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              <span class="rate">4.7(21)</span>
+            </div>
+            <hr>
+            <div class = "product-price">
+              <p class = "new-price mb-2">Price: <span>₹24,999</span></p>
+            </div>
+            <hr>
+            <div class = "product-detail">
+              <h6><b>About This Item:</b></h6>
+              <p>
+                6.49" Inch 16.5cm FHD+ Punch-hole Display with 2400x1080 pixels. Larger screen to body ratio of 90.5%.Side Fingerprint Sensor
+                Qualcomm Snapdragon 480 5G GPU 619 at 650 MHz Support 5G sim Powerful 2 GHz Octa-core processor, support LPDDR4X memory and latest UFS 2.1 gear 3 storage
+                5000 mAh lithium polymer battery
+                48MP Quad Camera 48MP Main + 2MP Macro + 2MP Depth Lens 8MP Front Camera
+                Memory, Storage & SIM: 6GB RAM 128GB internal memory expandable up to 256GB Dual SIM nano+nano dual-standby 5G+5G. Color OS 11.1 based on Android v11.0 operating system
+                Connector type: USB Type C64MP+8MP+2MP triple rear camera with 1080p video at 30/60 fps, 4k 30 fps | 16MP front camera with 1080p video at 30/60 fps.
+                6.43-inch, 90Hz fluid AMOLED display with 2400 x 1080 pixels resolution | 410ppi
+                Memory, Storage & SIM: 8GB RAM | 128GB internal memory on UFS 2.1 storage system.
+                Dual SIM (nano + nano) | OnePlus Nord CE currently supports dual 4G SIM Cards or a single 5G SIM + 4G SIM.
+                Chipset: Qualcomm Snapdragon 750G 5G mobile platform with an octa-core processor, Kryo 570 CPU (20% improvement from predecessor), and an Adreno 619 GPU (10% improved graphics performance from predecessor).
+                Alexa Hands-Free capable: Download the Alexa app to use Alexa hands-free. Play music, make calls, hear news, open apps, navigate, and more, all using just your voice, while on-the-go.
+                Display type: LCD
+              </p>
+            </div>
+            <hr>
+            <div class="product-detail">
+                <h6 class="mb-3"><b>Available offers:</b></h6>
+                <p class="bank-offer"><i class="fas fa-tag"></i>  <b>Bank Offer</b> 5% Unlimited Cashback on Axis Bank Credit Card</p>
+                <p class="bank-offer"><i class="fas fa-tag"></i>  <b>Bank Offer</b> 20% off on 1st txn with Amex Network Cards issued by ICICI Bank,IndusInd Bank,SBI Cards and Mobikwik</p>
+                <p class="bank-offer"><i class="fas fa-tag"></i>  <b>Bank Offer</b> 10% Off on Bank of Baroda Mastercard debit card first time transaction, Terms and Condition apply</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="tabs" class="project-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">General</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Additional Information</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Easy Payment Options</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <table class="table" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td>In The Box</td>
+                                        <td>Phone,USB cable,Charger,SIM ejector tool,Protective case,Quick start guide,Safety guide</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Model Number</td>
+                                        <td>CPH2263</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Model Name</td>
+                                        <td>OnePlus Nord CE 5G</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Color</td>
+                                        <td>‎Blue Void<a/td>
+                                    </tr>
+                                    <tr>
+                                        <td>Browse Type</td>
+                                        <td>Smartphones</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SIM Type</td>
+                                        <td>Dual Sim</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hybrid Sim Slot</td>
+                                        <td>NO</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Touchscreen</td>
+                                        <td>YES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>OTG Compatible</td>
+                                        <td>YES</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <table class="table" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td>Memory & Storage Features</td>
+                                        <td>6 GB RAM | 128 GB ROM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Display Features</td>
+                                        <td>‎15.9 x 0.8 x 7.4 cm; 170 Grams</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Camera Features</td>
+                                        <td>64MP+8MP+2MP</td>   
+                                    </tr>
+                                    <tr>
+                                        <td>Battery Capacity</td>
+                                        <td>5000 mAh Battery</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <table class="table" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td>EMI starts at ₹1,177. No Cost EMI available</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cash on Delivery</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Net banking & Credit/ Debit/ ATM card</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      <script>
+          const imgs = document.querySelectorAll('.img-select a');
+const imgBtns = [...imgs];
+let imgId = 1;
+
+imgBtns.forEach((imgItem) => {
+    imgItem.addEventListener('click', (event) => {
+        event.preventDefault();
+        imgId = imgItem.dataset.id;
+        slideImage();
+    });
+});
+
+function slideImage(){
+    const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+    document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+}
+
+window.addEventListener('resize', slideImage);
+      </script>
+<!--footer-->
+<hr>
+<div class="footers bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-2 footers-one mt-5">
+          <h5 class="underline-small">COMING SOON</h5>
+          <ul class="list-unstyled">
+            <li><a href="" style="text-decoration: none;">HEADPHONE</a></li>
+            <li><a href="" style="text-decoration: none;">LAPTOP</a></li>
+            <li><a href="" style="text-decoration: none;">KIDS STORE</a></li>
+            <li><a href="" style="text-decoration: none;">APPLIANCES</a></li>
+            <li><a href="" style="text-decoration: none;">SPORTS</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-xs-12 col-md-2 footers-two mt-5">
+          <h5 class="underline-small">MOBILE</h5>
+          <ul class="list-unstyled">
+            <li><a href="" style="text-decoration: none;">VIVO</a></li>
+            <li><a href="" style="text-decoration: none;">OPPO</a></li>
+            <li><a href="" style="text-decoration: none;">SAMSUNG</a></li>
+            <li><a href="" style="text-decoration: none;">XIAOMI</a></li>
+            <li><a href="" style="text-decoration: none;">APPLE</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-xs-12 col-md-2 footers-three mt-5">
+          <h5 class="underline-small">HELP</h5>
+          <ul class="list-unstyled">
+            <li><a href="" style="text-decoration: none;">Payments</a></li>
+            <li><a href="" style="text-decoration: none;">Shipping</a></li>
+            <li><a href="" style="text-decoration: none;">Cancellation & Return</a></li>
+            <li><a href="" style="text-decoration: none;">FAQ</a></li>
+            <li><a href="" style="text-decoration: none;">Returns Policy</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-xs-12 col-md-3 footers-four mt-5">
+          <h5 class="underline-small">PAYMENT</h5>
+          <div class="icons"> 
+              <img src="https://img.icons8.com/fluent/48/000000/visa.png"/>
+              <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"/>
+              <img src="https://img.icons8.com/color/48/000000/google-pay-india.png"/>
+              <img src="https://img.icons8.com/ios-filled/50/000000/amex.png"/>
+              <img src="https://img.icons8.com/ios-filled/50/000000/apple-pay.png"/>
+              <img src="https://img.icons8.com/color/48/000000/paypal.png"/>
+              <img src="https://img.icons8.com/ios-filled/50/000000/bhim-upi.png"/>
+              <img src="https://img.icons8.com/color/48/000000/paytm.png"/>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-3 footers-three mt-5">
+          <h5 class="underline-small">CONTACT US</h5>
+          <ul class="list-unstyled">
+              <li><a href="" style="text-decoration: none;"><i class="fas fa-map-marker-alt" style="color: rgb(0, 136, 247);"></i> 16 St Flr, 8/a, Sita Estate, Aziz Baug, Rc Marg, Chembur (east) Mumbai Maharashtra</a></li>
+              <li><a href="" style="text-decoration: none;"><i class="fas fa-phone-square-alt" style="color: rgb(60, 245, 60);"></i> 02225543524</a></li>
+            </ul>
+        </div>
+        </div>
+  </div>
+  <hr>
+    <div class="team">
+    <p>© 2021 Copyright: Design By The <a href="https://sanketmane.netlify.app/">Sanket Mane</a> | Frontend Developer</p>
+     </div>
+</div>
+
+<!--js-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
